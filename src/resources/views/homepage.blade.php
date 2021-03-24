@@ -12,7 +12,7 @@
     <header>
         <x-header />
     </header>
-    <main></main>
+    <main><a href="/logout" class="btn btn-primary">Logout</a></main>
     <footer>
         <x-footer />
     </footer>
