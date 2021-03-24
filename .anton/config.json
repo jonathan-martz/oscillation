@@ -1,0 +1,33 @@
+{
+    "pipelines": {
+        "production": {
+            "branch": "master",
+            "server": "13371337"
+        }
+    },
+    "servers": {
+        "13371337": {
+            "host": "195.201.38.163",
+            "domain": "oscillation.jmartz.de",
+            "user": "root",
+            "folder":"/var/www"
+        }
+    },
+    "steps": [
+        {
+            "name": "Robo Install",
+            "identifier": "robo-install",
+            "command": "robo:install"
+        },
+        {
+            "name": "Composer Install",
+            "identifier": "composer-install",
+            "command": "composer:install"
+        },
+        {
+            "name": "Deploy",
+            "identifier": "deploy",
+            "command": "deploy"
+        }
+    ]
+}
