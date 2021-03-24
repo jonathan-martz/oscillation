@@ -53,4 +53,19 @@ class RoboFile extends Tasks{
 
         // delete old versions
     }
+
+    public function publishVersion(){
+        $config = $this->ConfigLoad('anton-config');
+
+        $user = $config['server']['user'];
+        $host = $config['server']['host'];
+        $domain = $config['server']['domain'];
+        $tmp = date('d-m-Y-H-i');
+
+        // Link env
+        $this->taskSshExec($host, $user)
+        ->remoteDir('/var/www/' . $domain.'/releases/current')
+        ->exec('ln -s ../../shared/.env')
+        ->run();
+    }
 }

@@ -28,6 +28,11 @@
             "name": "Deploy",
             "identifier": "deploy",
             "command": "deploy"
+        },
+        {
+            "name": "Publish Version",
+            "identifier": "publish-version",
+            "command": "publish:version"
         }
     ]
 }
