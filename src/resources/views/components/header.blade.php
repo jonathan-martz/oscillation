@@ -4,6 +4,7 @@
             <span class="logo">Oscillation</span>
         </div>
         <div class="col-12 col-md-6 mt-2">
+            <a href="/" class="btn btn-secondary">Homepage</a>
             <a href="/login" class="btn btn-secondary">Login</a>
             <a href="/logout" class="btn btn-secondary">Logout</a>
             <a href="/overview" class="btn btn-secondary">Overview</a>
