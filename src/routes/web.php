@@ -22,6 +22,14 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/logout', function () {
+    return view('logout');
+});
+
+Route::get('/overview', function () {
+    return view('overview');
+});
+
 Route::post('/submit', function () {
     return view('submit');
 });
