@@ -39,11 +39,6 @@ class RoboFile extends Tasks{
             ->run();
 
         $this->taskSshExec($host, $user)
-        ->remoteDir('/var/www/' . $domain.'/releases/'.$tmp)
-        ->exec('yarn install')
-        ->run();
-
-        $this->taskSshExec($host, $user)
         ->remoteDir('/var/www/' . $domain.'/releases')
         ->exec('rm -rf current')
         ->exec('mv '.$tmp.' current')
